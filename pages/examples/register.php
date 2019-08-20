@@ -54,13 +54,13 @@ input[type=submit] {
   background: #f1f1f1;
   color: #000;
   position: relative;
-  padding: 20px;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 2px;
 }
 
 #message p {
   padding: 10px 35px;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
@@ -101,7 +101,7 @@ input[type=submit] {
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="email" id="email"> require
+        <input type="email" class="form-control" placeholder="Email" name="email" id="email" require> 
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -117,7 +117,7 @@ input[type=submit] {
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div id="message">
-        <h3>Password must contain the following:</h3>
+        <h4>Password must contain the following:</h4>
         <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
         <p id="number" class="invalid">A <b>number</b></p>
