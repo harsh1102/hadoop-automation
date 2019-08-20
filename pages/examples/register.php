@@ -117,7 +117,7 @@ input[type=submit] {
         <input type="password" class="form-control" placeholder="Retype password" name="confpass" id="confpass" require>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="errodiv">
 							<span class="error" style="color:red"></span><br />
 						</div>
       <div id="message">
@@ -143,66 +143,68 @@ input[type=submit] {
 <!-- /.register-box -->
 
 <script>
-// var myInput = document.getElementById("pass");
-// var letter = document.getElementById("letter");
-// var capital = document.getElementById("capital");
-// var number = document.getElementById("number");
-// var length = document.getElementById("length");
+$('#errodiv').hide();
+var myInput = document.getElementById("pass");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
 
-// // When the user clicks on the password field, show the message box
-// myInput.onfocus = function() {
-//   document.getElementById("message").style.display = "block";
-// }
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
 
-// // When the user clicks outside of the password field, hide the message box
-// myInput.onblur = function() {
-//   document.getElementById("message").style.display = "none";
-// }
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
 
-// // When the user starts to type something inside the password field
-// myInput.onkeyup = function() {
-//   // Validate lowercase letters
-//   var lowerCaseLetters = /[a-z]/g;
-//   if(myInput.value.match(lowerCaseLetters)) {  
-//     letter.classList.remove("invalid");
-//     letter.classList.add("valid");
-//   } else {
-//     letter.classList.remove("valid");
-//     letter.classList.add("invalid");
-//   }
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
   
-//   // Validate capital letters
-//   var upperCaseLetters = /[A-Z]/g;
-//   if(myInput.value.match(upperCaseLetters)) {  
-//     capital.classList.remove("invalid");
-//     capital.classList.add("valid");
-//   } else {
-//     capital.classList.remove("valid");
-//     capital.classList.add("invalid");
-//   }
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
 
-//   // Validate numbers
-//   var numbers = /[0-9]/g;
-//   if(myInput.value.match(numbers)) {  
-//     number.classList.remove("invalid");
-//     number.classList.add("valid");
-//   } else {
-//     number.classList.remove("valid");
-//     number.classList.add("invalid");
-//   }
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
   
-//   // Validate length
-//   if(myInput.value.length >= 8) {
-//     length.classList.remove("invalid");
-//     length.classList.add("valid");
-//   } else {
-//     length.classList.remove("valid");
-//     length.classList.add("invalid");
-//   }
-// }
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
 
 var allowsubmit = false;
 		$(function(){
+      $('#errodiv').show();
 			//on keypress 
 			$('#confpass').keyup(function(e){
 				//get values 
@@ -211,10 +213,12 @@ var allowsubmit = false;
 				
 				//check the strings
 				if(pass == confpass){
+          $('#errodiv').show();
 					//if both are same remove the error and allow to submit
 					$('.error').text('Matched');
 					allowsubmit = true;
 				}else{
+          $('#errodiv').show();
 					//if not matching show error and not allow to submit
 					$('.error').text('Password not matching');
 					allowsubmit = false;
