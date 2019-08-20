@@ -60,7 +60,7 @@ input[type=submit] {
 
 #message p {
   padding: 10px 35px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
@@ -113,7 +113,7 @@ input[type=submit] {
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password" name="repass" id="repass" require>
+        <input type="password" class="form-control" placeholder="Retype password" name="confpass" id="confpass" require>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div id="message">
@@ -124,13 +124,6 @@ input[type=submit] {
         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
       </div>
       <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> I agree to the <a href="#">terms</a>
-            </label>
-          </div>
-        </div>
         <!-- /.col -->
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
@@ -203,6 +196,45 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
+
+var allowsubmit = false;
+		$(function(){
+			//on keypress 
+			$('#confpass').keyup(function(e){
+				//get values 
+				var pass = $('#pass').val();
+				var confpass = $(this).val();
+				
+				//check the strings
+				if(pass == confpass){
+					//if both are same remove the error and allow to submit
+					$('.error').text('Matched');
+					allowsubmit = true;
+				}else{
+					//if not matching show error and not allow to submit
+					$('.error').text('Password not matching');
+					allowsubmit = false;
+				}
+			});
+			
+			//jquery form submit
+			$('#form').submit(function(){
+			
+				var pass = $('#pass').val();
+				var confpass = $('#confpass').val();
+ 
+				//just to make sure once again during submit
+				//if both are true then only allow submit
+				if(pass == confpass){
+					allowsubmit = true;
+				}
+				if(allowsubmit){
+					return true;
+				}else{
+					return false;
+				}
+			});
+		});
 </script>
 
 </body>
