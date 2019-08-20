@@ -28,13 +28,13 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><img src="../../logo.png" height="80" width="320"></a>
+    <img src="../../logo.png" height="80" width="320">
   </div>
 
   <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
 
-    <form action="../../index.html" method="post">
+    <form action="../../require/registration.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Full name">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
