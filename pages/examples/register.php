@@ -215,11 +215,13 @@ var allowsubmit = false;
 				if(pass == confpass){
           $('#errodiv').show();
 					//if both are same remove the error and allow to submit
+          $('.error').css('color', 'green');
 					$('.error').text('Matched');
 					allowsubmit = true;
 				}else{
           $('#errodiv').show();
 					//if not matching show error and not allow to submit
+          $('.error').css('color', 'red');
 					$('.error').text('Password not matching');
 					allowsubmit = false;
 				}
