@@ -1,22 +1,22 @@
 <?php
     require 'vendor/autoload.php';
     
-    use Aws\DynamoDb\Exception\DynamoDbException;
-    use Aws\DynamoDb\DynamoDbClient;
+    // use Aws\DynamoDb\Exception\DynamoDbException;
+    // use Aws\DynamoDb\DynamoDbClient;
 
-    date_default_timezone_set("Asia/Kolkata");
-    // if((isset($_POST['submit'])) {
+    // date_default_timezone_set("Asia/Kolkata");
+    // // if((isset($_POST['submit'])) {
 
-        $client = DynamoDbClient::factory(array(
-            'profile' => 'default',
-            'region' => 'us-east-1',
-            'version' => '2018-08-21',
-            'credentials.cache' => true,
-            'validation' => false,
-            'scheme' => 'http'
-        ));
+    //     $client = DynamoDbClient::factory(array(
+    //         'profile' => 'default',
+    //         'region' => 'us-east-1',
+    //         'version' => '2018-08-21',
+    //         'credentials.cache' => true,
+    //         'validation' => false,
+    //         'scheme' => 'http'
+    //     ));
 
-        echo $client;
+    //     echo $client;
 
         // $sdk = new Aws\Sdk([
         //     'endpoint'   => 'http://3.87.118.50',
