@@ -7,7 +7,7 @@
   ));
   foreach ($response->body->Items as $item)
   {
-    print_r ($item);
+    print_r ($item->userId);
   }
 
   if(isset($_POST['submit'])){
