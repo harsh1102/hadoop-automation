@@ -8,7 +8,7 @@
   echo $response->body->Items;
   foreach ($response->body->Items as $item)
   {
-    print_r ($item->userId);
+    print_r ($item->userId->{AmazonDynamoDB::TYPE_NUMBER};);
   }
 
   if(isset($_POST['submit'])){
