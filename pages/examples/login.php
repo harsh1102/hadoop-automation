@@ -28,7 +28,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    ><img src="../../logo.png" height="80" width="320">
+    <img src="../../logo.png" height="80" width="320">
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
