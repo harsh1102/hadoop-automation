@@ -2,30 +2,19 @@
     require 'vendor/autoload.php';
     
     use Aws\DynamoDb\Exception\DynamoDbException;
-    use Aws\DynamoDb\DynamoDbClient;
+    use Aws\DynamoDb\Marshaler;
 
     // date_default_timezone_set("Asia/Kolkata");
 
-        $client = DynamoDbClient::factory(array(
-            'profile' => 'default',
-            'region' => 'us-east-1',
-            'version' => '2018-08-21',
-            'credentials.cache' => true,
-            'validation' => false,
-            'scheme' => 'http'
-        ));
-
-    //     echo $client;
-
-        // $sdk = new Aws\Sdk([
-        //     'endpoint'   => 'http://3.87.118.50',
-        //     'region'   => 'us-east-1',
-        //     'version'  => 'latest'
-        // ]);
+        $sdk = new Aws\Sdk([
+            'endpoint'   => 'http://3.87.118.50',
+            'region'   => 'us-east-1',
+            'version'  => 'latest'
+        ]);
         
-        // $dynamodb = $sdk->createDynamodb();
-        
-        // $dataset = new Dataset();
+        $dynamodb = $sdk->createDynamoDb();
+        $marshaler = new Marshaler();
+
 
         // $tablename = "Users";
 
@@ -58,6 +47,5 @@
         //     echo "Unable to add item:\n";
         //     echo $e->getMessage() . "\n";
         // }
-    // }
 
 ?>
