@@ -2,17 +2,17 @@
 
   require_once('../../require/dbconfig.php');
 
-  $response = $client->scan(array(
-    'TableName' => 'Users',
-    'Select' => 'ALL_ATTRIBUTES'
-  ));
+  // $response = $client->scan(array(
+  //   'TableName' => 'Users',
+  //   'Select' => 'ALL_ATTRIBUTES'
+  // ));
 
 
-  $total = count($response['Items']);
+  // $total = count($response['Items']);
 
-  $userid = $total + 1;
+  // $userid = $total + 1;
 
-  echo $userid;
+  // echo $userid;
 
   if(isset($_POST['submit'])){
 
