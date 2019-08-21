@@ -25,7 +25,7 @@
     $responseput = $client->putItem(array(
         'TableName' => 'Users',
         'Item' => array(
-            "userId" => array('S'      => $userid      ),
+            "userId" => array('S'      => '1'      ),
             "user_name" => array('S'      => $name      ),
             "user_email" => array('S'      => $email      ),
             "company_name" => array('S'      => $companyname      ),
