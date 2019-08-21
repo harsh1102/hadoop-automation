@@ -12,6 +12,7 @@
 
   $userid = $total + 1;
 
+  echo $userid;
   
   if(isset($_POST['submit'])){
 
