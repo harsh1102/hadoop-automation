@@ -3,14 +3,14 @@
   require_once('../../require/dbconfig.php');
 
   $response = $client->scan(array(
-    'TableName' => 'Users'
+    'TableName' => 'Users',
+    'Select' => 'ALL_ATTRIBUTES'
   ));
-  echo $response->body->Items;
-  foreach ($response->body->Items as $item)
-  {
-    print_r ($item->userId->{AmazonDynamoDB::TYPE_NUMBER};);
-  }
 
+
+  echo $response['Items'];
+
+  
   if(isset($_POST['submit'])){
 
     $name = $_POST['fullname'];
