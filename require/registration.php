@@ -17,8 +17,8 @@
     $response = $client->putItem(array(
         'TableName' => 'Users',
         'Item' => array(
-            "userid" => '1',
-            "createdAt" => 'knjmjinh'
+            "userid" => array('S'      => '1'      ),,
+            "createdAt" => array('S'      => 'jashbf'      )
         )
     ));
 
