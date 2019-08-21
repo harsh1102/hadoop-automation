@@ -2,11 +2,13 @@
 
   require_once('../../require/dbconfig.php');
 
-  $response = $client->getItem(array(
+  $response = $client->scan(array(
     'TableName' => 'Users'
   ));
-
-  print_r ($response['Item']);
+  foreach ($response->body->Items as $item)
+  {
+    print_r ($item);
+  }
 
   if(isset($_POST['submit'])){
 
