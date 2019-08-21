@@ -210,25 +210,33 @@ input[type=submit] {
   }
 
     // When the user starts to type something inside the password field
+  var lcvalidsubmit = false;
+  var ucvalidsubmit = false;
+  var nvalidsubmit = false;
+  var lvalidsubmit = false;
   myInput.onkeyup = function() {
     // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
     if(myInput.value.match(lowerCaseLetters)) {  
       letter.classList.remove("invalid");
       letter.classList.add("valid");
+      lcvalidsubmit = true;
     } else {
+      lcvalidsubmit = false;
       letter.classList.remove("valid");
       letter.classList.add("invalid");
     }
   
     // Validate capital letters
     var upperCaseLetters = /[A-Z]/g;
-    if(myInput.value.match(upperCaseLetters)) {  
+    if(myInput.value.match(upperCaseLetters)) {
       capital.classList.remove("invalid");
       capital.classList.add("valid");
+      ucvalidsubmit = true;
     } else {
       capital.classList.remove("valid");
       capital.classList.add("invalid");
+      ucvalidsubmit = false;
     }
 
     // Validate numbers
@@ -236,19 +244,31 @@ input[type=submit] {
     if(myInput.value.match(numbers)) {  
       number.classList.remove("invalid");
       number.classList.add("valid");
+      nvalidsubmit = true;
     } else {
       number.classList.remove("valid");
       number.classList.add("invalid");
+      nvalidsubmit = false;
     }
   
     // Validate length
     if(myInput.value.length >= 8) {
       length.classList.remove("invalid");
       length.classList.add("valid");
+      lvalidsubmit = true;
     } else {
       length.classList.remove("valid");
       length.classList.add("invalid");
+      lvalidsubmit = false;
     }
+
+    if(lcvalidsubmit && ucvalidsubmit && nvalidsubmit && lvalidsubmit){
+          $("#registerbutton").attr("disabled", false);
+					return true;
+				}else{
+          $("#registerbutton").attr("disabled", true);
+					return false;
+				}
   }
 
   var allowsubmit = false;
