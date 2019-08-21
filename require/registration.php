@@ -3,44 +3,47 @@
     date_default_timezone_set('UTC');
     use Aws\DynamoDb\Exception\DynamoDbException;
 
-    $sdk = new Aws\Sdk([
-        'endpoint'   => 'http://3.87.118.50',
-        'region'   => 'us-east-1',
-        'version'  => 'latest'
-    ]);
-    
-    $dynamodb = $sdk->createDynamodb();
-    
-    $dataset = new Dataset();
+    if((isset($_POST['submit'])) {
 
-    $tablename = "Users";
+        $sdk = new Aws\Sdk([
+            'endpoint'   => 'http://3.87.118.50',
+            'region'   => 'us-east-1',
+            'version'  => 'latest'
+        ]);
+        
+        $dynamodb = $sdk->createDynamodb();
+        
+        $dataset = new Dataset();
 
-    $name = $_POST['fullname'];
-    $email = $_POST['email'];
-    $companyname = $_POST['companyname'];
-    $password = $_POST['pass'];
+        $tablename = "Users";
 
-    $item = $dataset->dataSetJson('
-    {
-        "name": '. $name .',
-        "email": '. $email .',
-        "companyname": '. $companyname .',
-        "password": '. $password .'
-    }
-    ');
+        $name = $_POST['fullname'];
+        $email = $_POST['email'];
+        $companyname = $_POST['companyname'];
+        $password = $_POST['pass'];
 
-    $params = [
-        'TableName' => 'Users',
-        'Item' => $item
-    ];
+        $item = $dataset->dataSetJson('
+        {
+            "name": '. $name .',
+            "email": '. $email .',
+            "companyname": '. $companyname .',
+            "password": '. $password .'
+        }
+        ');
 
-    try {
-        $result = $dynamodb->putItem($params);
-        echo "Added items";
-    
-    } catch (DynamoDbException $e) {
-        echo "Unable to add item:\n";
-        echo $e->getMessage() . "\n";
+        $params = [
+            'TableName' => 'Users',
+            'Item' => $item
+        ];
+
+        try {
+            $result = $dynamodb->putItem($params);
+            echo "Added items";
+        
+        } catch (DynamoDbException $e) {
+            echo "Unable to add item:\n";
+            echo $e->getMessage() . "\n";
+        }
     }
 
 ?>
