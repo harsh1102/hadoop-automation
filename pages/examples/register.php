@@ -130,7 +130,7 @@ input[type=submit] {
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" id="registerbutton">Register</button>
         </div>
         <!-- /.col -->
       </div>
@@ -143,6 +143,7 @@ input[type=submit] {
 <!-- /.register-box -->
 
 <script>
+  $("#registerbutton").attr("disabled", true);
   $('#errodiv').hide();
   var myInput = document.getElementById("pass");
   var letter = document.getElementById("letter");
@@ -217,12 +218,14 @@ input[type=submit] {
 					//if both are same remove the error and allow to submit
           $('.error').css('color', 'green');
 					$('.error').text('Matched');
+          $("#registerbutton").attr("disabled", false);
 					allowsubmit = true;
 				}else{
           $('#errodiv').show();
 					//if not matching show error and not allow to submit
           $('.error').css('color', 'red');
 					$('.error').text('Password not matching');
+          $("#registerbutton").attr("disabled", true);
 					allowsubmit = false;
 				}
 			});
@@ -239,8 +242,10 @@ input[type=submit] {
 					allowsubmit = true;
 				}
 				if(allowsubmit){
+          $("#registerbutton").attr("disabled", false);
 					return true;
 				}else{
+          $("#registerbutton").attr("disabled", true);
 					return false;
 				}
 			});
