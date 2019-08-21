@@ -5,6 +5,7 @@
   $response = $client->scan(array(
     'TableName' => 'Users'
   ));
+  echo $response->body->Items;
   foreach ($response->body->Items as $item)
   {
     print_r ($item->userId);
