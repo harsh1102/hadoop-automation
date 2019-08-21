@@ -6,7 +6,7 @@
     'TableName' => 'Users'
   ));
 
-  print_r (count($response['Item']));
+  print_r ($response['Item']);
 
   if(isset($_POST['submit'])){
 
