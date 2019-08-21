@@ -24,29 +24,29 @@
         $password = $_POST['pass'];
 
 
-        $item = $marshaler->marshalerJson('
-        {
-            "userid": '1',
-            "name": '. $name .',
-            "email": '. $email .',
-            "companyname": '. $companyname .',
-            "password": '. $password .'
-            "createdAt": '.date("d/m/Y").'
-        }
+        $item = $marshaler->marshalJson('
+            {
+                "userid": 1,
+                "name": '. $name .',
+                "email": '. $email .',
+                "companyname": '. $companyname .',
+                "password": '. $password .'
+                "createdAt": knjmjinh
+            }
         ');
 
-        $params = [
-            'TableName' => 'Users',
-            'Item' => $item
-        ];
+        // $params = [
+        //     'TableName' => 'Users',
+        //     'Item' => $item
+        // ];
 
-        try {
-            $result = $dynamodb->putItem($params);
-            echo "Added items";
+        // try {
+        //     $result = $dynamodb->putItem($params);
+        //     echo "Added items";
         
-        } catch (DynamoDbException $e) {
-            echo "Unable to add item:\n";
-            echo $e->getMessage() . "\n";
-        }
+        // } catch (DynamoDbException $e) {
+        //     echo "Unable to add item:\n";
+        //     echo $e->getMessage() . "\n";
+        // }
 
 ?>
