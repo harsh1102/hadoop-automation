@@ -18,7 +18,10 @@
         'TableName' => 'Users',
         'Item' => array(
             "userId" => array('S'      => '1'      ),
-            "createdAt" => array('S'      => 'jashbf'      )
+            "name" => array('S'      => $name      ),
+            "companyname" => array('S'      => $companyname      ),
+            "password" => array('S'      => $password      ),
+            "createdAt" => array('S'      =>   date("d/m/Y")    )
         )
     ));
 
