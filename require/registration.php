@@ -24,16 +24,16 @@
         $password = $_POST['pass'];
 
 
-        $item = $marshaler->marshalJson('
-            {
-                "userid": 1,
-                "name": '. $name .',
-                "email": '. $email .',
-                "companyname": '. $companyname .',
-                "password": '. $password .'
-                "createdAt": knjmjinh
-            }
-        ');
+        // $item = $marshaler->marshalJson('
+        //     {
+        //         "userid": 1,
+        //         "name": '. $name .',
+        //         "email": '. $email .',
+        //         "companyname": '. $companyname .',
+        //         "password": '. $password .'
+        //         "createdAt": knjmjinh
+        //     }
+        // ');
 
         // $params = [
         //     'TableName' => 'Users',
