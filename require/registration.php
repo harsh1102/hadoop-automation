@@ -16,6 +16,8 @@
             'scheme' => 'http'
         ));
 
+        echo $client;
+
         // $sdk = new Aws\Sdk([
         //     'endpoint'   => 'http://3.87.118.50',
         //     'region'   => 'us-east-1',
@@ -24,39 +26,39 @@
         
         // $dynamodb = $sdk->createDynamodb();
         
-        $dataset = new Dataset();
+        // $dataset = new Dataset();
 
-        $tablename = "Users";
+        // $tablename = "Users";
 
-        $name = $_POST['fullname'];
-        $email = $_POST['email'];
-        $companyname = $_POST['companyname'];
-        $password = $_POST['pass'];
+        // $name = $_POST['fullname'];
+        // $email = $_POST['email'];
+        // $companyname = $_POST['companyname'];
+        // $password = $_POST['pass'];
 
-        $item = $dataset->dataSetJson('
-        {
-            "userid": '1',
-            "name": '. $name .',
-            "email": '. $email .',
-            "companyname": '. $companyname .',
-            "password": '. $password .'
-            "createdAt": '.date("d/m/Y").'
-        }
-        ');
+        // $item = $dataset->dataSetJson('
+        // {
+        //     "userid": '1',
+        //     "name": '. $name .',
+        //     "email": '. $email .',
+        //     "companyname": '. $companyname .',
+        //     "password": '. $password .'
+        //     "createdAt": '.date("d/m/Y").'
+        // }
+        // ');
 
-        $params = [
-            'TableName' => 'Users',
-            'Item' => $item
-        ];
+        // $params = [
+        //     'TableName' => 'Users',
+        //     'Item' => $item
+        // ];
 
-        try {
-            $result = $client->putItem($params);
-            echo "Added items";
+        // try {
+        //     $result = $client->putItem($params);
+        //     echo "Added items";
         
-        } catch (DynamoDbException $e) {
-            echo "Unable to add item:\n";
-            echo $e->getMessage() . "\n";
-        }
+        // } catch (DynamoDbException $e) {
+        //     echo "Unable to add item:\n";
+        //     echo $e->getMessage() . "\n";
+        // }
     // }
 
 ?>
