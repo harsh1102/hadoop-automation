@@ -13,7 +13,7 @@
   $userid = $total + 1;
 
   echo $userid;
-  
+
   if(isset($_POST['submit'])){
 
     $name = $_POST['fullname'];
@@ -22,13 +22,13 @@
     $password = $_POST['pass'];
 
 
-    $response = $client->putItem(array(
+    $responseput = $client->putItem(array(
         'TableName' => 'Users',
         'Item' => array(
             "userId" => array('S'      => $userid      ),
-            "name" => array('S'      => $name      ),
-            "email" => array('S'      => $email      ),
-            "companyname" => array('S'      => $companyname      ),
+            "user_name" => array('S'      => $name      ),
+            "user_email" => array('S'      => $email      ),
+            "company_name" => array('S'      => $companyname      ),
             "password" => array('S'      => $password      ),
             "createdAt" => array('S'      =>   date("d/m/Y")    )
         )
