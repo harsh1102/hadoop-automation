@@ -4,23 +4,25 @@
 
   if(isset($_POST['submit'])){
 
-    $response = $client->scan(array(
-      'TableName' => 'Users',
-      'Select' => 'ALL_ATTRIBUTES'
-    ));
+    // $response = $client->scan(array(
+    //   'TableName' => 'Users',
+    //   'Select' => 'ALL_ATTRIBUTES'
+    // ));
   
   
-    $total = count($response['Items']);
+    // $total = count($response['Items']);
   
-    $userid = $total + 1;
+    // $userid = $total + 1;
   
+    // echo $userid;
+
+    $userid = uniqid(hadoop);
     echo $userid;
 
     $name = $_POST['fullname'];
     $email = $_POST['email'];
     $companyname = $_POST['companyname'];
     $password = $_POST['pass'];
-
 
     $responseput = $client->putItem(array(
         'TableName' => 'Users',
