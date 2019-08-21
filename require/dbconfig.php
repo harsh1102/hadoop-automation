@@ -1,4 +1,7 @@
 <?php
+
+    require 'vendor/autoload.php';
+    
     use Aws\DynamoDb\Exception\DynamoDbException;
     use Aws\DynamoDb\Marshaler;
     use Aws\DynamoDb\DynamoDbClient;

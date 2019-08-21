@@ -23,7 +23,7 @@
             )
         ));
 
-        echo $response['statusCode'];
+        echo $response;
     }
 
 ?>
