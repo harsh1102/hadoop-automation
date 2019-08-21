@@ -16,36 +16,36 @@
         $marshaler = new Marshaler();
 
 
-        // $tablename = "Users";
+        $tablename = "Users";
 
-        // $name = $_POST['fullname'];
-        // $email = $_POST['email'];
-        // $companyname = $_POST['companyname'];
-        // $password = $_POST['pass'];
+        $name = $_POST['fullname'];
+        $email = $_POST['email'];
+        $companyname = $_POST['companyname'];
+        $password = $_POST['pass'];
 
-        // $item = $dataset->dataSetJson('
-        // {
-        //     "userid": '1',
-        //     "name": '. $name .',
-        //     "email": '. $email .',
-        //     "companyname": '. $companyname .',
-        //     "password": '. $password .'
-        //     "createdAt": '.date("d/m/Y").'
-        // }
-        // ');
+        $item = $dataset->dataSetJson('
+        {
+            "userid": '1',
+            "name": '. $name .',
+            "email": '. $email .',
+            "companyname": '. $companyname .',
+            "password": '. $password .'
+            "createdAt": '.date("d/m/Y").'
+        }
+        ');
 
-        // $params = [
-        //     'TableName' => 'Users',
-        //     'Item' => $item
-        // ];
+        $params = [
+            'TableName' => 'Users',
+            'Item' => $item
+        ];
 
-        // try {
-        //     $result = $client->putItem($params);
-        //     echo "Added items";
+        try {
+            $result = $dynamodb->putItem($params);
+            echo "Added items";
         
-        // } catch (DynamoDbException $e) {
-        //     echo "Unable to add item:\n";
-        //     echo $e->getMessage() . "\n";
-        // }
+        } catch (DynamoDbException $e) {
+            echo "Unable to add item:\n";
+            echo $e->getMessage() . "\n";
+        }
 
 ?>
