@@ -8,7 +8,7 @@
   ));
 
 
-  echo $response;
+  echo count($response['Items']);
 
   
   if(isset($_POST['submit'])){
