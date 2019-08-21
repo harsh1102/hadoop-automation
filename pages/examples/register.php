@@ -8,7 +8,9 @@
   ));
 
 
-  $userid = count($response['Items']);
+  $total = count($response['Items']);
+
+  $userid += $total;
 
   
   if(isset($_POST['submit'])){
