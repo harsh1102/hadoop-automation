@@ -2,8 +2,9 @@
     require 'vendor/autoload.php';
     
     use Aws\DynamoDb\Exception\DynamoDbException;
+    use Aws\DynamoDb\DynamoDbClient;
 
-    if((isset($_POST['submit'])) {
+    // if((isset($_POST['submit'])) {
 
         $client = DynamoDbClient::factory(array(
             'profile' => 'default',
@@ -53,6 +54,6 @@
             echo "Unable to add item:\n";
             echo $e->getMessage() . "\n";
         }
-    }
+    // }
 
 ?>
