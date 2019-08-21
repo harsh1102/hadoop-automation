@@ -8,7 +8,7 @@
   ));
 
 
-  echo count($response['Items']);
+  $userid = count($response['Items']);
 
   
   if(isset($_POST['submit'])){
@@ -22,7 +22,7 @@
     $response = $client->putItem(array(
         'TableName' => 'Users',
         'Item' => array(
-            "userId" => array('S'      => '1'      ),
+            "userId" => array('S'      => $userid      ),
             "name" => array('S'      => $name      ),
             "email" => array('S'      => $email      ),
             "companyname" => array('S'      => $companyname      ),
