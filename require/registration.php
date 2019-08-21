@@ -22,7 +22,6 @@
         )
     ));
 
-    echo $response;
     // date_default_timezone_set("Asia/Kolkata");
 
     //     $sdk = new Aws\Sdk([
