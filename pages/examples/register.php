@@ -2,7 +2,7 @@
 
   require_once('../../require/dbconfig.php');
 
-  $response = $client->scan(array(
+  $response = $client->getItem(array(
     'TableName' => 'Users'
   ));
 
