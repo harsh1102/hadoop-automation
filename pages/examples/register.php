@@ -8,7 +8,7 @@
   ));
 
 
-  echo $response['Items'];
+  echo $response;
 
   
   if(isset($_POST['submit'])){
