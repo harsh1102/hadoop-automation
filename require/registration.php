@@ -4,7 +4,7 @@
     use Aws\DynamoDb\Exception\DynamoDbException;
     use Aws\DynamoDb\DynamoDbClient;
 
-    date_default_timezone_set("Asia/Kolkata");
+    // date_default_timezone_set("Asia/Kolkata");
 
         $client = DynamoDbClient::factory(array(
             'profile' => 'default',
