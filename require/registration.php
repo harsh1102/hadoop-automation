@@ -4,6 +4,7 @@
     use Aws\DynamoDb\Exception\DynamoDbException;
     use Aws\DynamoDb\DynamoDbClient;
 
+    date_default_timezone_set("Asia/Kolkata");
     // if((isset($_POST['submit'])) {
 
         $client = DynamoDbClient::factory(array(
@@ -34,10 +35,12 @@
 
         $item = $dataset->dataSetJson('
         {
+            "userid": '1',
             "name": '. $name .',
             "email": '. $email .',
             "companyname": '. $companyname .',
             "password": '. $password .'
+            "createdAt": '.date("d/m/Y").'
         }
         ');
 

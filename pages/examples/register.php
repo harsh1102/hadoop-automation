@@ -127,6 +127,7 @@ input[type=submit] {
         <p id="number" class="invalid">A <b>number</b></p>
         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
       </div>
+      <br>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-4">
