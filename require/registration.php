@@ -1,5 +1,5 @@
 <?php
-    require '/path/to/aws-autoloader.php';
+    require '../aws-autoloader.php';
     date_default_timezone_set('UTC');
     use Aws\DynamoDb\Exception\DynamoDbException;
 
