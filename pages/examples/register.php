@@ -210,11 +210,11 @@ input[type=submit] {
   }
 
     // When the user starts to type something inside the password field
-  var lcvalidsubmit = false;
-  var ucvalidsubmit = false;
-  var nvalidsubmit = false;
-  var lvalidsubmit = false;
   myInput.onkeyup = function() {
+    global $lcvalidsubmit = false;
+    global $ucvalidsubmit = false;
+    global $nvalidsubmit = false;
+    global $lvalidsubmit = false;
     // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
     if(myInput.value.match(lowerCaseLetters)) {  
@@ -261,18 +261,10 @@ input[type=submit] {
       length.classList.add("invalid");
       lvalidsubmit = false;
     }
-
-    if(lcvalidsubmit && ucvalidsubmit && nvalidsubmit && lvalidsubmit){
-          $("#registerbutton").attr("disabled", false);
-					return true;
-				}else{
-          $("#registerbutton").attr("disabled", true);
-					return false;
-				}
   }
 
-  var allowsubmit = false;
 		$(function(){
+      global $allowsubmit = false;
       $('#errodiv').show();
 			//on keypress 
 			$('#confpass').keyup(function(e){
@@ -309,13 +301,20 @@ input[type=submit] {
 				if(pass == confpass){
 					allowsubmit = true;
 				}
-				if(allowsubmit){
+        if(lcvalidsubmit && ucvalidsubmit && nvalidsubmit && lvalidsubmit && allowsubmit){
           $("#registerbutton").attr("disabled", false);
 					return true;
 				}else{
           $("#registerbutton").attr("disabled", true);
 					return false;
 				}
+				// if(allowsubmit){
+        //   $("#registerbutton").attr("disabled", false);
+				// 	return true;
+				// }else{
+        //   $("#registerbutton").attr("disabled", true);
+				// 	return false;
+				// }
 			});
 		});
 </script>
