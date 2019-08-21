@@ -16,8 +16,8 @@
   
     // echo $userid;
 
-    $userid = uniqid(hadoop);
-    echo $userid;
+    // $userid = uniqid();
+    // echo $userid;
 
     $name = $_POST['fullname'];
     $email = $_POST['email'];
@@ -27,7 +27,7 @@
     $responseput = $client->putItem(array(
         'TableName' => 'Users',
         'Item' => array(
-            "userId" => array('N'      => $userid     ),
+            "userId" => array('S'      => uniqid()    ),
             "user_name" => array('S'      => $name      ),
             "user_email" => array('S'      => $email      ),
             "company_name" => array('S'      => $companyname      ),
