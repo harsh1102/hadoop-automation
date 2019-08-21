@@ -1,6 +1,6 @@
 <?php
     require 'vendor/autoload.php';
-    
+
     require_once('dbconfig.php');
 
     if(isset($_POST['submit'])){
@@ -22,6 +22,8 @@
                 "createdAt" => array('S'      =>   date("d/m/Y")    )
             )
         ));
+
+        echo $response;
     }
 
 ?>
