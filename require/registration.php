@@ -14,6 +14,15 @@
         'scheme' => 'http'
     ));
 
+    $response = $client->putItem(array(
+        'TableName' => 'Users',
+        'Item' => array(
+            "userid" => '1',
+            "createdAt" => 'knjmjinh'
+        )
+    ));
+
+    echo $response;
     // date_default_timezone_set("Asia/Kolkata");
 
     //     $sdk = new Aws\Sdk([
