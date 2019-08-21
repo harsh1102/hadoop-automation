@@ -1,6 +1,6 @@
 <?php
 
-    require_once('dbconfig.php');
+require_once('../../require/dbconfig.php');
     if(isset($_POST['submit'])){
 
         $name = $_POST['fullname'];
