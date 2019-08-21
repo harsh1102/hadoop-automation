@@ -3,33 +3,43 @@
     
     use Aws\DynamoDb\Exception\DynamoDbException;
     use Aws\DynamoDb\Marshaler;
+    use Aws\DynamoDb\DynamoDbClient;
+
+    $client = DynamoDbClient::factory(array(
+        'profile' => 'default',
+        'region' => 'us-east-1',
+        'version' => '2012-08-10',
+        'credentials.cache' => true,
+        'validation' => false,
+        'scheme' => 'http'
+    ));
 
     // date_default_timezone_set("Asia/Kolkata");
 
-        $sdk = new Aws\Sdk([
-            'endpoint'   => 'http://3.87.118.50',
-            'region'   => 'us-east-1',
-            'version'  => 'latest'
-        ]);
+    //     $sdk = new Aws\Sdk([
+    //         'endpoint'   => 'http://3.87.118.50',
+    //         'region'   => 'us-east-1',
+    //         'version'  => 'latest'
+    //     ]);
         
-        $dynamodb = $sdk->createDynamoDb();
-        $marshaler = new Marshaler();
+    //     $dynamodb = $sdk->createDynamoDb();
+    //     $marshaler = new Marshaler();
 
 
-        $tablename = "Users";
+    //     $tablename = "Users";
 
-        $name = $_POST['fullname'];
-        $email = $_POST['email'];
-        $companyname = $_POST['companyname'];
-        $password = $_POST['pass'];
+    //     $name = $_POST['fullname'];
+    //     $email = $_POST['email'];
+    //     $companyname = $_POST['companyname'];
+    //     $password = $_POST['pass'];
 
 
-        $item = $marshaler->marshalJson('
-            {
-                "userid": 1,
-                "createdAt": knjmjinh
-            }
-        ');
+    //     $item = $marshaler->marshalJson('
+    //         {
+    //             "userid": 1,
+    //             "createdAt": knjmjinh
+    //         }
+    //     ');
 
         // $params = [
         //     'TableName' => 'Users',
