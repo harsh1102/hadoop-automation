@@ -23,29 +23,31 @@
         $companyname = $_POST['companyname'];
         $password = $_POST['pass'];
 
-        $item = $dataset->dataSetJson('
-        {
-            "userid": '1',
-            "name": '. $name .',
-            "email": '. $email .',
-            "companyname": '. $companyname .',
-            "password": '. $password .'
-            "createdAt": '.date("d/m/Y").'
-        }
-        ');
+        echo $name;
 
-        $params = [
-            'TableName' => 'Users',
-            'Item' => $item
-        ];
+        // $item = $dataset->dataSetJson('
+        // {
+        //     "userid": '1',
+        //     "name": '. $name .',
+        //     "email": '. $email .',
+        //     "companyname": '. $companyname .',
+        //     "password": '. $password .'
+        //     "createdAt": '.date("d/m/Y").'
+        // }
+        // ');
 
-        try {
-            $result = $dynamodb->putItem($params);
-            echo "Added items";
+        // $params = [
+        //     'TableName' => 'Users',
+        //     'Item' => $item
+        // ];
+
+        // try {
+        //     $result = $dynamodb->putItem($params);
+        //     echo "Added items";
         
-        } catch (DynamoDbException $e) {
-            echo "Unable to add item:\n";
-            echo $e->getMessage() . "\n";
-        }
+        // } catch (DynamoDbException $e) {
+        //     echo "Unable to add item:\n";
+        //     echo $e->getMessage() . "\n";
+        // }
 
 ?>
