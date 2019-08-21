@@ -125,7 +125,7 @@ input[type=submit] {
   <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
 
-    <form action="/" method="post">
+    <form action="" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Full name" name="fullname" id="fullname" require>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
