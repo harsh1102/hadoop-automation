@@ -7,8 +7,9 @@
     $email = $_POST['email'];
     $password = $_POST['pass'];
 
-    $responseput = $client->getItem(array(
-        'TableName' => 'Users'
+    $responseput = $client->scan(array(
+        'TableName' => 'Users',
+        'Select' => 'ALL_ATTRIBUTES'
     ));
 
     print_r($responseput["Item"]);
