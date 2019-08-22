@@ -12,7 +12,7 @@
         'Select' => 'ALL_ATTRIBUTES'
     ));
 
-    print_r($responseput["Item"]);
+    print_r($responseput["Items"]);
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully registerd');";
     // echo "window.location.href = 'login.php';";
