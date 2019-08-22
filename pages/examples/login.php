@@ -15,7 +15,7 @@
         )
     ));
 
-    echo $responseput['items'];
+    echo $responseput['Item'];
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully registerd');";
     // echo "window.location.href = 'login.php';";
