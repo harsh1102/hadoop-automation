@@ -190,7 +190,7 @@ input[type=submit] {
         <!-- /.col -->
       </div>
     </form>
-
+    <div></div>
     <a href="login.php" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
@@ -209,11 +209,13 @@ input[type=submit] {
   // When the user clicks on the password field, show the message box
   myInput.onfocus = function() {
     document.getElementById("message").style.display = "block";
+    document.getElementById("errodiv").style.display = "block";
   }
 
   // When the user clicks outside of the password field, hide the message box
   myInput.onblur = function() {
     document.getElementById("message").style.display = "none";
+    document.getElementById("errodiv").style.display = "none";
   }
 
     // When the user starts to type something inside the password field
