@@ -8,13 +8,14 @@
     $password = $_POST['pass'];
 
     $responseput = $client->getItem(array(
+        'ConsistentRead' => true,
         'TableName' => 'Users',
         'Key' => array(
           'user_email' => array( 'S' => 'harshmuniwala33@gmail.com' )
         )
     ));
 
-    print_r($responseput["Item"]);
+    print_r($responseput);
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully registerd');";
     // echo "window.location.href = 'login.php';";
