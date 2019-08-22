@@ -79,14 +79,14 @@
                                     <li class="dropdown user user-menu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                            <span class="hidden-xs">Alexander Pierce</span>
+                                            <span class="hidden-xs"><?php echo $_SESSION['user_email'] ?></span>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <!-- User image -->
                                             <li class="user-header">
                                                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                                 <p>
-                                                    Alexander Pierce - Web Developer
+                                                    <?php echo $_SESSION['user_email'] ?> - Web Developer
                                                     <small>Member since Nov. 2012</small>
                                                 </p>
                                             </li>
@@ -137,58 +137,49 @@
                             <!-- sidebar menu: : style can be found in sidebar.less -->
                             <ul class="sidebar-menu" data-widget="tree">
                                 <li class="header">MAIN NAVIGATION</li>
-                                <li>
-                                    <a href="pages/widgets.html">
-                                        <i class="fa fa-th"></i> <span>Widgets</span>
-                                        <span class="pull-right-container">
-                                            <small class="label pull-right bg-green">new</small>
-                                        </span>
-                                    </a>
-                                </li>
-
                                 <li class="treeview">
                                     <a href="#">
                                         <i class="fa fa-laptop"></i>
-                                        <span>UI Elements</span>
-                                        <span class="pull-right-container">
+                                        <span>Cloudera Manager</span>
+                                        <!-- <span class="pull-right-container">
                                             <i class="fa fa-angle-left pull-right"></i>
-                                        </span>
+                                        </span> -->
                                     </a>
-                                    <ul class="treeview-menu">
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
                                         <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
                                         <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
                                         <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
                                         <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
                                         <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="treeview">
                                     <a href="#">
-                                        <i class="fa fa-edit"></i> <span>Forms</span>
-                                        <span class="pull-right-container">
+                                        <i class="fa fa-edit"></i> <span>Spark</span>
+                                        <!-- <span class="pull-right-container">
                                             <i class="fa fa-angle-left pull-right"></i>
-                                        </span>
+                                        </span> -->
                                     </a>
-                                    <ul class="treeview-menu">
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
                                         <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
                                         <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li class="treeview">
                                     <a href="#">
-                                        <i class="fa fa-table"></i> <span>Tables</span>
-                                        <span class="pull-right-container">
+                                        <i class="fa fa-table"></i> <span>Kafka</span>
+                                        <!-- <span class="pull-right-container">
                                             <i class="fa fa-angle-left pull-right"></i>
-                                        </span>
+                                        </span> -->
                                     </a>
-                                    <ul class="treeview-menu">
+                                    <!-- <ul class="treeview-menu">
                                         <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
                                         <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
-                                <li class="treeview">
+                                <!-- <li class="treeview">
                                     <a href="#">
                                         <i class="fa fa-folder"></i> <span>Examples</span>
                                         <span class="pull-right-container">
@@ -239,7 +230,7 @@
                                         </li>
                                         <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="header">System Log</li>
                                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
                                 <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
@@ -280,10 +271,10 @@
                     <!-- /.content-wrapper -->
 
                     <footer class="main-footer">
-                        <div class="pull-right hidden-xs">
+                        <!-- <div class="pull-right hidden-xs">
                             <b>Version</b> 2.4.0
-                        </div>
-                        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
+                        </div> -->
+                        <strong>Copyright &copy; 2019-2020 <a href="https://adminlte.io">Petabytz</a>.</strong> All rights reserved.
                     </footer>
 
                 </div>
