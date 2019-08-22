@@ -15,8 +15,6 @@
           "password" => array('S' => $password )
         )
     ));
-
-    // print_r($responseput['Item']);
     if(!empty($responseput['Item'])) {
       echo "<script type='text/javascript'>";
       echo "alert('Successfully Logined');";
@@ -39,7 +37,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>Petabytz | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Theme style -->
