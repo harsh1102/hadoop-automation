@@ -190,7 +190,7 @@ input[type=submit] {
         <!-- /.col -->
       </div>
     </form>
-    <br><br>
+    <br>
     <a href="login.php" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
