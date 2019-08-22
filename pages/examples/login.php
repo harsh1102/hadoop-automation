@@ -18,8 +18,8 @@
 
     print_r($responseput);
     // echo "<script type='text/javascript'>";
-    // echo "alert('Successfully registerd');";
-    // echo "window.location.href = 'login.php';";
+    // echo "alert('Successfully Logined');";
+    // echo "window.location.href = '/';";
     // echo "</script>";
   }
   
