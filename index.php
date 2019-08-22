@@ -1,7 +1,6 @@
 <?php
     session_start();
 
-    echo $_SESSION['user_email'];
     if(!isset($_SESSION['user_email']))
     {
         echo "<script type='text/javascript'>";

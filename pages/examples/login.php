@@ -1,5 +1,11 @@
 <?php
   session_start();
+  if(isset($_SESSION['user_email']))
+  {
+    echo "<script type='text/javascript'>";
+    echo "window.location.href = '/';";
+    echo "</script>";
+  }
   require_once('../../require/dbconfig.php');
 
   if(isset($_POST['login'])){
