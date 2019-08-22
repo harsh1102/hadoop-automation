@@ -1,3 +1,30 @@
+<?php
+
+  require_once('../../require/dbconfig.php');
+
+  if(isset($_POST['submit'])){
+
+    $email = $_POST['email'];
+    $password = $_POST['pass'];
+
+    $responseput = $client->putItem(array(
+        'TableName' => 'Users',
+        'Key' => array(
+            "user_email" => array('S'      => $email      ),
+            "password" => array('S'      => $password      )
+        )
+    ));
+
+    echo $responseput['items'];
+    // echo "<script type='text/javascript'>";
+    // echo "alert('Successfully registerd');";
+    // echo "window.location.href = 'login.php';";
+    // echo "</script>";
+  }
+  
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,13 +61,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="../../require/login.php" method="post">
+    <form action="" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" require>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" require>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -53,7 +80,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" name="submit" id="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
