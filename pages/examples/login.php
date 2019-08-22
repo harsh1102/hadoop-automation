@@ -7,12 +7,14 @@
     $email = $_POST['email'];
     $password = $_POST['pass'];
 
-    $responseput = $client->scan(array(
+    $responseput = $client->getItem(array(
         'TableName' => 'Users',
-        'Select' => 'ALL_ATTRIBUTES'
+        'Key' => array(
+          'user_email' => array( 'S' => 'harshmuniwala33@gmail.com' )
+        )
     ));
 
-    print_r($responseput["Items"]);
+    print_r($responseput["Item"]);
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully registerd');";
     // echo "window.location.href = 'login.php';";
