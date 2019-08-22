@@ -235,7 +235,7 @@
                                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
                                 <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
                                 <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-                                <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+                                <li><a href="/"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
                             </ul>
                         </section>
                         <!-- /.sidebar -->
@@ -274,7 +274,7 @@
                         <!-- <div class="pull-right hidden-xs">
                             <b>Version</b> 2.4.0
                         </div> -->
-                        <strong>Copyright &copy; 2019-2020 <a href="https://adminlte.io">Petabytz</a>.</strong> All rights reserved.
+                        <strong>Copyright &copy; 2019-2020 <a href="/">Petabytz</a>.</strong> All rights reserved.
                     </footer>
 
                 </div>
