@@ -16,7 +16,7 @@
         )
     ));
 
-    print_r($responseput);
+    print_r($responseput['Item']);
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully Logined');";
     // echo "window.location.href = '/';";
