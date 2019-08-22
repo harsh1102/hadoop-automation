@@ -11,7 +11,8 @@
         'ConsistentRead' => true,
         'TableName' => 'Users',
         'Key' => array(
-          'user_email' => array( 'S' => 'harshmuniwala33@gmail.com' )
+          'user_email' => array( 'S' => $emial ),
+          "password" => array('S' => $password )
         )
     ));
 
