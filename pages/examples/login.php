@@ -8,7 +8,7 @@
     $password = $_POST['pass'];
 
     $responseput = $client->getItem(array(
-        'TableName' => 'Users',
+        'TableName' => 'Users'
     ));
 
     print_r($responseput["Item"]);
