@@ -115,7 +115,7 @@ input[type=submit] {
 
 #message p {
   padding: 10px 35px;
-  font-size: 5px;
+  font-size: 15px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
@@ -190,7 +190,7 @@ input[type=submit] {
         <!-- /.col -->
       </div>
     </form>
-    <div></div>
+    <br><br>
     <a href="login.php" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
