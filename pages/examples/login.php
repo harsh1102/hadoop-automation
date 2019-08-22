@@ -85,16 +85,16 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
+        <!-- <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
               <input type="checkbox"> Remember Me
             </label>
           </div>
-        </div>
+        </div> -->
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <center><button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Sign In</button></center>
         </div>
         <!-- /.col -->
       </div>
