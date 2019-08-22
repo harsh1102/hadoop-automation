@@ -16,11 +16,19 @@
         )
     ));
 
-    print_r($responseput['Item']);
-    // echo "<script type='text/javascript'>";
-    // echo "alert('Successfully Logined');";
-    // echo "window.location.href = '/';";
-    // echo "</script>";
+    // print_r($responseput['Item']);
+    if(!empty($responseput['Item'])) {
+      echo "<script type='text/javascript'>";
+      echo "alert('Successfully Logined');";
+      echo "window.location.href = '/';";
+      echo "</script>";
+    }
+    else {
+      echo "<script type='text/javascript'>";
+      echo "alert('Email or Password is incorrect');";
+      echo "window.location.href = 'login.php';";
+      echo "</script>";
+    }
   }
   
 ?>
