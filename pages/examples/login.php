@@ -9,13 +9,9 @@
 
     $responseput = $client->getItem(array(
         'TableName' => 'Users',
-        'Key' => array(
-            "user_email" => array('S'      => $email      ),
-            "password" => array('S'      => $password      )
-        )
     ));
 
-    echo $responseput['Item'];
+    print_r($responseput["Item"]);
     // echo "<script type='text/javascript'>";
     // echo "alert('Successfully registerd');";
     // echo "window.location.href = 'login.php';";
