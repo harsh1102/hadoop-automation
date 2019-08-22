@@ -7,7 +7,7 @@
     $email = $_POST['email'];
     $password = $_POST['pass'];
 
-    $responseput = $client->putItem(array(
+    $responseput = $client->getItem(array(
         'TableName' => 'Users',
         'Key' => array(
             "user_email" => array('S'      => $email      ),
