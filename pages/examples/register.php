@@ -115,7 +115,7 @@ input[type=submit] {
 
 #message p {
   padding: 10px 35px;
-  font-size: 15px;
+  font-size: 5px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
