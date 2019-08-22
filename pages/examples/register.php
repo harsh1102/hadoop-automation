@@ -200,6 +200,7 @@ input[type=submit] {
 <script>
   $("#registerbutton").attr("disabled", true);
   $('#errodiv').hide();
+  document.getElementById("errodiv").style.display = "none";
   var myInput = document.getElementById("pass");
   var letter = document.getElementById("letter");
   var capital = document.getElementById("capital");
