@@ -1,8 +1,8 @@
 <?php
-
+  session_start();
   require_once('../../require/dbconfig.php');
 
-  if(isset($_POST['submit'])){
+  if(isset($_POST['login'])){
 
     $email = $_POST['email'];
     $password = $_POST['pass'];
@@ -16,6 +16,7 @@
         )
     ));
     if(!empty($responseput['Item'])) {
+      $_SESSION['user_email']= $email;
       echo "<script type='text/javascript'>";
       echo "alert('Successfully Logined');";
       echo "window.location.href = '/';";
@@ -87,7 +88,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="submit" id="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
