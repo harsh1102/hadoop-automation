@@ -93,14 +93,14 @@
           </div>
         </div> -->
         <!-- /.col -->
-        <div>
-          <center><button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Sign In</button></center>
+        <div class="col-xs-4">
+          <button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
-    
-    <a href="#">I forgot my password</a><br>
+
+    <!-- <a href="#">I forgot my password</a><br> -->
     <a href="register.php" class="text-center">Register a new membership</a>
 
   </div>
