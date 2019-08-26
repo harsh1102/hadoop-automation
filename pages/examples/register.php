@@ -28,6 +28,7 @@
 
     $name = $_POST['fullname'];
     $email = $_POST['email'];
+    $mobileno = $_POST['mobileno'];
     $companyname = $_POST['companyname'];
     $password = $_POST['pass'];
 
@@ -37,6 +38,7 @@
             "userId" => array('S'      => uniqid()    ),
             "user_name" => array('S'      => $name      ),
             "user_email" => array('S'      => $email      ),
+            "user_mobileno" => array('S'      => $mobileno      ),
             "company_name" => array('S'      => $companyname      ),
             "password" => array('S'      => $password      ),
             "createdAt" => array('S'      =>   date("d/m/Y")    )
@@ -157,6 +159,10 @@ input[type=submit] {
       </div>
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email" name="email" id="email" require> 
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="number" class="form-control" placeholder="Mobile number" name="mobileno" id="mobileno" require> 
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

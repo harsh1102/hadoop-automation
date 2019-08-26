@@ -77,7 +77,7 @@
 
     <form action="" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Email" require>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email/CustomerId/Username" require>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
